@@ -19,7 +19,7 @@ SOA架构  治理中心（ESB/dubbo)
                  服务间采用restful等轻量级http协议相互调用
             缺点：开发技术成本，复杂性高
 微服务常见问题
-如何管理小服务？（服务治理，注册中心，服务注册，发现，删除）nacos
+如何管理小服务？ 服务与服务之间错综复杂（服务治理，注册中心，服务注册，发现，删除）nacos
 服务之间如何通讯？（restful,fegin,dubbo,rpc）java里面httpclient springboot restTemplate("url",参数)
                 springcloud用的openfeign restTemplate
 客户端如何访问：网关gateway 认证授权限流,使用网关负载均衡+nginx
