@@ -10,4 +10,9 @@ spring:
       discovery:
         username: nacos
         password: nacos
-        namespace: public
+        namespace: public #相同特征的服务进行归类分组管理
+        # ephemeral: false #永久实例，宕机实例也不会删除
+        # service: 默认是${spring.application.name}
+        # group: 更细的分组
+        # weight: 负载均衡权重 权重越高分配的流量越大
+        # metadata: version=1  元数据拓展
