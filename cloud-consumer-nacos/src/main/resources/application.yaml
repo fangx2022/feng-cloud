@@ -16,3 +16,6 @@ spring:
         # group: 更细的分组
         # weight: 负载均衡权重 权重越高分配的流量越大
         # metadata: version=1  元数据拓展
+cloud-provider-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule

@@ -17,9 +17,9 @@ import org.springframework.web.client.RestTemplate;
  * @Data 2024年06月05日 21:55
  */
 @SpringBootApplication
-@RibbonClients(value={
-        @RibbonClient(name="cloud-provider-service",configuration = RibbonRandomRuleConfig.class)
-})
+//@RibbonClients(value={
+//        @RibbonClient(name="cloud-provider-service",configuration = RibbonRandomRuleConfig.class)
+//})
 public class CloudConsumerNacosApplication {
 
     public static void main(String[] args) {
