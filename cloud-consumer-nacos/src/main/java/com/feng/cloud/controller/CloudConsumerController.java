@@ -11,8 +11,8 @@ import org.springframework.web.client.RestTemplate;
  * @Date:2024/6/5 11:45
  */
 @RestController
-@RequestMapping("/cloud1")
-public class Cloud1Controller {
+@RequestMapping("/cloud-consumer")
+public class CloudConsumerController {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -20,7 +20,7 @@ public class Cloud1Controller {
     @RequestMapping("/add")
     public String addCloud1(){
         System.out.println("cloud1 添加成功!!!");
-        String message = restTemplate.getForObject("http://cloud2-service/cloud2/add", String.class);
+        String message = restTemplate.getForObject("http://cloud-provider-service/cloud-provider/add", String.class);
         return "cloud1 add success  "+message;
     };
 }

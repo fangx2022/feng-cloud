@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @Data 2024年06月05日 21:56
  */
 @SpringBootApplication
-public class Cloud2NacosApplication {
+public class CloudProviderNacosApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Cloud2NacosApplication.class,args);
+        SpringApplication.run(CloudProviderNacosApplication.class,args);
     }
 }

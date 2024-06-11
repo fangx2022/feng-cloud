@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date:2024/6/5 11:45
  */
 @RestController
-@RequestMapping("/cloud2")
-public class Cloud2Controller {
+@RequestMapping("/cloud-provider")
+public class CloudProviderController {
 
     @Value("${server.port}")
     private String port;

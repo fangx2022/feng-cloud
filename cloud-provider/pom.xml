@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud1</artifactId>
+    <artifactId>cloud-provider</artifactId>
 
     <dependencies>
         <dependency>
@@ -17,4 +17,5 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
+
 </project>

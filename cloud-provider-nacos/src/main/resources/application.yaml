@@ -3,12 +3,12 @@ server:
   #应用名称（nacos会将改名称当做服务名称）
 spring:
   application:
-    name: cloud2-service
+    name: cloud-provider-service
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8848
+      server-addr: 47.100.65.75:80
       discovery:
         username: nacos
         password: nacos
         namespace: public
-        ephemeral: false
+        #ephemeral: false

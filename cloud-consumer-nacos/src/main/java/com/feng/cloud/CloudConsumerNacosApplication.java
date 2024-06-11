@@ -1,9 +1,13 @@
 package com.feng.cloud;
 
+import com.feng.config.RibbonRandomRuleConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.netflix.ribbon.RibbonClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,10 +17,13 @@ import org.springframework.web.client.RestTemplate;
  * @Data 2024年06月05日 21:55
  */
 @SpringBootApplication
-public class Cloud1NacosApplication {
+@RibbonClients(value={
+        @RibbonClient(name="cloud-provider-service",configuration = RibbonRandomRuleConfig.class)
+})
+public class CloudConsumerNacosApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Cloud1NacosApplication.class,args);
+        SpringApplication.run(CloudConsumerNacosApplication.class,args);
     }
 
     @Bean
