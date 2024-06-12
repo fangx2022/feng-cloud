@@ -19,7 +19,7 @@ public class CloudProviderController {
     @RequestMapping("/add")
     public String addCloud2(){
         System.out.println("cloud2 添加成功!!!");
-        return "cloud2 add success "+port;
+        return "cloudFeign add success "+port;
     };
 
 }

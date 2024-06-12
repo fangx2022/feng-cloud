@@ -7,6 +7,7 @@
         <module>cloud-provider</module>
         <module>cloud-consumer-nacos</module>
         <module>cloud-provider-nacos</module>
+        <module>cloud-consumer-openfeign</module>
     </modules>
 
     <groupId>com.feng.cloud</groupId>
