@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description://TODO
+ * @Description://流控  设置在服务提供方
  * @Author: fangx
  * @Data 2024年06月23日 21:44
  */
@@ -95,7 +95,7 @@ public class SentinelController {
      * @return
      */
     @RequestMapping("/user")
-    @SentinelResource(value = RESOURCE_NAME,
+    @SentinelResource(value = USER_RESOURCE_NAME,
             blockHandler = "blockHandlerForGetUser")
     public String getUser(String id){
         return "111";
