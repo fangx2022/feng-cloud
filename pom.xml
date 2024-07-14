@@ -9,6 +9,7 @@
         <module>cloud-provider-nacos</module>
         <module>cloud-consumer-openfeign</module>
         <module>cloud-nacos-config</module>
+        <module>cloud-sentinel</module>
     </modules>
 
     <groupId>com.feng.cloud</groupId>
