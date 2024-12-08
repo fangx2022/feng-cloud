@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: cloud.nacos.config
+  cloud:
+    nacos:
+      server-addr: 47.100.65.75:80
+      username: nacos
+      password: nacos
+      config:
+        file-extension: yaml
+        namespace: dev
+        group: cloud-dev
+      #不写Nacos客户端默认是properties
+      #config:
+        #namespace: public #相同特征的服务进行归类分组管理
+        # ephemeral: false #永久实例，宕机实例也不会删除
+        # service: 默认是${spring.application.name}
+        # group: 更细的分组
+        # weight: 负载均衡权重 权重越高分配的流量越大
+        # metadata: version=1  元数据拓展
+        shared-configs:
+          - data-id: cloud.nacos.config02.yaml
+            refresh: true
+            group: cloud-dev
+          - data-id: cloud.nacos.config03.yaml
+            refresh: true
+            group: cloud-dev
+        extension-configs[0]:
+          data-id: cloud.nacos.config02.yaml
+          refresh: true
+          group: cloud-dev
+        extension-configs[1]:
+          data-id: cloud.nacos.config03.yaml
+          refresh: true
+          group: cloud-dev
+
+#默认优先级（优先级大的会覆盖优先级小的，并且会形成互补）
+#profile(见application。yaml)>默认配置文件>extendsion-configs(下表越大优先级越大)>shared-configs(下表越大优先级越大)

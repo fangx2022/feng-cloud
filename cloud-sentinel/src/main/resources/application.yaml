@@ -1,0 +1,14 @@
+server:
+  port: 8061
+spring:
+  application:
+    name: cloud-sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+  #表示读取服务名-dev的配置文件，切文件命名必须加上后缀 (优先级大于默认和服务名相同的文件，不用加后缀)
+#spring:
+#  profiles:
+#    active: dev
+

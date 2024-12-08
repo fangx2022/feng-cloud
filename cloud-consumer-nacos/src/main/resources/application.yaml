@@ -1,0 +1,29 @@
+server:
+  port: 8090
+  #应用名称（nacos会将改名称当做服务名称）
+spring:
+  application:
+    name: cloud-consumer-service
+  cloud:
+    nacos:
+      server-addr: 47.100.65.75:80
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public #相同特征的服务进行归类分组管理
+        # ephemeral: false #永久实例，宕机实例也不会删除
+        # service: 默认是${spring.application.name}
+        # group: 更细的分组
+        # weight: 负载均衡权重 权重越高分配的流量越大
+        # metadata: version=1  元数据拓展
+cloud-provider-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.feng.cloud.config.RandomRuleConfig
+    # NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+
+Ribbon:
+  eager-load:
+    # 开启ribbon饥饿加载
+    enabled: true
+    # 配置服务使用饥饿加载，多个使用逗号分隔
+    clients: cloud-provider-service
